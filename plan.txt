@@ -1,8 +1,8 @@
 Plan
 
-Install Django
-Create project
-Check in to github account
+Done - Install Django
+Done - Create project
+Done - Check in to github account
 Get simple version running locally (create and view only) using SQLite
 Deploy and get working on GAE/Cloud SQL
 Add delete (and deploy)
