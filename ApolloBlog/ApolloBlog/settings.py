@@ -44,9 +44,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+    #'django.contrib.messages.middleware.MessageMiddleware',
+    #'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
 ROOT_URLCONF = 'ApolloBlog.urls'
@@ -59,8 +59,12 @@ WSGI_APPLICATION = 'ApolloBlog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'ENGINE': 'google.appengine.ext.django.backends.rdbms',
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': '173.194.254.194',
+        'NAME': 'ApolloBlog',
+        'USER': 'root@%',
+        'PASSWORD': 'Like 29 * the pain'
     }
 }
 
