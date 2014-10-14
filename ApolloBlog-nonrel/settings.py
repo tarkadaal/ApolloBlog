@@ -1,0 +1,1 @@
+from apolloblognonrel.settings import *
