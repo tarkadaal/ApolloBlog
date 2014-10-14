@@ -5,6 +5,7 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^blog/', include('blog.urls', namespace='blog'))
     # Examples:
     # url(r'^$', 'apolloblognonrel.views.home', name='home'),
     # url(r'^apolloblognonrel/', include('apolloblognonrel.foo.urls')),
