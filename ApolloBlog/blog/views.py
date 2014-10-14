@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 
 from blog.models import Article
@@ -9,6 +9,6 @@ def index(request):
 	return render(request, 'blog/index.html', context)
 
 def detail(request, article_id):
-	article = Article.objects.get(pk=article_id)
-	context = {'article': article}
+	article = get_object_or_404(Article, pk=article_id)
+	context  = {'article': article}
 	return render(request, 'blog/details.html', context)
