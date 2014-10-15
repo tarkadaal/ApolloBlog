@@ -1,6 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+
 {% if article %}
 	<h2>{{article.title}}</h2>
 	<p>{{article.body}}</p>
+	<a href="{% url 'blog:edit' article.id %}">Edit</a> or 
+	<a href="{% url 'blog:delete' article.id %}">delete</a> this Article.
 {% else %}
     <p>That article is not available.</p>
 {% endif %}
+{% endblock %}

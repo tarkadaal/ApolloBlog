@@ -1,3 +1,7 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
 {% if latest_articles %}
     <ul>
     {% for article in latest_articles %}
@@ -9,3 +13,4 @@
 {% endif %}
 <br/>
 <a href="{% url 'blog:compose' %}">Compose a new Article</a> 
+{% endblock %}

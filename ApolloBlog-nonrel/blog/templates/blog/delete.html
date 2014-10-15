@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+
+<h1>Delete Article</h1>
+{% if error_message %}<p><strong>{{ error_message }} </strong></p> {% endif %}
+
+<p><strong>Are you sure you want to delete article "{{article.title}}"?</strong></p>
+
+<form action="{% url 'blog:commit_delete' %}", method="post", id="delete_form">
+{% csrf_token %}
+<input type="hidden" name="id" value="{{ article.id }}" />
+<input type="submit" value="Yes, delete it" />
+</form>
+
+{% endblock %}
