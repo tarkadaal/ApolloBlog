@@ -2,6 +2,7 @@ import datetime
 
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 
 from django.core.urlresolvers import reverse
 
@@ -12,14 +13,17 @@ def index(request):
 	context =  {'latest_articles': latest_articles}
 	return render(request, 'blog/index.html', context)
 
+
 def detail(request, article_id):
 	article = get_object_or_404(Article, pk=article_id)
 	context  = {'article': article}
 	return render(request, 'blog/details.html', context)
 
+@login_required
 def compose(request):
 	return render(request, 'blog/compose.html')
 
+@login_required
 def create(request):
 	new_article = Article(
 		title=request.POST['title'],
