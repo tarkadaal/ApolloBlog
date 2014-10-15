@@ -26,6 +26,7 @@
 *.log
 *.sql
 *.sqlite*
+.gaedata
 
 # OS generated files #
 ######################
