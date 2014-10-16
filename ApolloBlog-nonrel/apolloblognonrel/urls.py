@@ -2,10 +2,12 @@ from django.conf.urls import patterns, include, url
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
-from django.contrib.auth import views
+from django.contrib.auth import views as authviews
+from apolloblognonrel import views
 admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^$', views.index, name='index'),
     url(r'^blog/', include('blog.urls', namespace='blog')),
     # Examples:
     # url(r'^$', 'apolloblognonrel.views.home', name='home'),
@@ -16,6 +18,6 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^accounts/login/$', views.login, name='login'),
-    url(r'^accounts/logout/$', views.logout, name='logout'),
+    url(r'^accounts/login/$', authviews.login, name='login'),
+    url(r'^accounts/logout/$', authviews.logout, name='logout'),
 )
