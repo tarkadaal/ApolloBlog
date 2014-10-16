@@ -8,7 +8,7 @@ from djangoappengine.settings_base import *
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
-DEBUG  = True
+DEBUG  = False
 
 MANAGERS = ADMINS
 

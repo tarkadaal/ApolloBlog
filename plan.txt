@@ -3,8 +3,10 @@ Plan
 Done - Install Django
 Done - Create project
 Done - Check in to github account
-Get simple version running locally (create and view only) using SQLite
-Deploy and get working on GAE/Cloud SQL
-Add delete (and deploy)
-Add edit (and deploy)
-Switch backend to google Datastore
+Done - Get simple version running locally (create and view only) using SQLite
+Done - Switch backend to google Datastore
+Done - Add delete (and deploy)
+Done - Add edit (and deploy)
+
+
+
