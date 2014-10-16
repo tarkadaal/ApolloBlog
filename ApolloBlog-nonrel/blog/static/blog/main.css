@@ -1,0 +1,32 @@
+body {
+    font-family: "Sans Serif";
+    background-color: #e4e4fe;
+    text-align: center;
+}
+
+h1, h2 {
+	display: block;
+	background: #404080;
+	color: white;
+}
+
+input[type=text], input[type=password], textarea {
+    font-family: "Sans Serif";
+	font-size: 16px;
+	margin: 5px;
+    padding: 5px;
+    min-height: 16px;
+    background-color: white;
+    color: black;
+}
+
+input[type=submit]{
+	font-size: 20px;
+	min-height: 30px
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

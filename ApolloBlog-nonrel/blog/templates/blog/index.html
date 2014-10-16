@@ -2,6 +2,9 @@
 {% load i18n %}
 
 {% block content %}
+
+<h1>Apollo Blog</h1>
+
 {% if latest_articles %}
     <ul>
     {% for article in latest_articles %}
@@ -12,5 +15,5 @@
     <p>No articles are available.</p>
 {% endif %}
 <br/>
-<a href="{% url 'blog:compose' %}">Compose a new Article</a> 
+<h3><a href="{% url 'blog:compose' %}">Compose a new Article</a> </h3>
 {% endblock %}
