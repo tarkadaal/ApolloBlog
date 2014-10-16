@@ -1,0 +1,15 @@
+README 
+
+This is the demonstration project for my application to join Apollo Live.
+
+This is deployed on Google App Engine at: hybrid-skill-733.blogspot.com. 
+The username to edit/delete/create posts is: apollo
+and the password is: demonstration.
+
+The ApolloBlog folder can be ignored. I started out working with pure Django, but hit stumbling blocks with authenticationn and deployment when I tried to move it to GAE and Google Cloud SQL. I then switched to using django-nonrel, and had much more success with that. I've left the ApolloBlog folder here so as not to hide anything that might weigh in to your decision making process.
+
+Things I would improve if I had more time:
+- When you log out, it drops you at the default Django admin logout screen, rather than taking you back to the main page
+- In the templates, there's a mix of native strings and {% trans %} strings
+- Add automated tests to the project
+
